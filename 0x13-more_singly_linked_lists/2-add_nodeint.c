@@ -2,7 +2,10 @@
 #include <stdlib.h>
 #include <string.h>
 #include "lists.h"
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6079d0efff4d97733d5ce99a9e9cc9a41c6412e3
 /**
   * add_nodeint_end - add node at end of a listint_t list.
   *
