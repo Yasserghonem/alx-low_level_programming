@@ -1,5 +1,7 @@
-include "lists.h"
+#include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include "lists.h"
 
 /**
  * insert_nodeint_at_index - inserting a new node at agiven postion
