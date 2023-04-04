@@ -2,34 +2,32 @@
 #include <stdlib.h>
 #include <string.h>
 #include "lists.h"
-<<<<<<< HEAD
 
-=======
->>>>>>> 6079d0efff4d97733d5ce99a9e9cc9a41c6412e3
 /**
-  * add_nodeint_end - add node at end of a listint_t list.
-  *
-  * @head: head of double pointer
-  * @n: int add the list
-  * Return: NULL if it failed
-  */
+ * add_nodeint - function that adds a new node at
+ * the beginning of a listint_t list
+ * @head: pointer
+ * @n: n to be added
+ * Return: newNode
+ */
 
-listint_t *add_nodeint_end(listint_t **head, const int n)
+listint_t *add_nodeint(listint_t **head, const int n)
 {
-	listint_t *ptr;
 
-	if (head == NULL)
+	listint_t *Node;
+
+	Node = malloc(sizeof(listint_t));
+
+	if (Node == NULL)
 	{
 		return (NULL);
-
-			ptr = malloc(sizeof(listint_t));
 	}
-		if (ptr == NULL)
-			return (NULL);
 
-		ptr->n = n;
-			ptr->next = *head;
-			*head = ptr;
+	Node->n = n;
 
-			return (ptr);
+	Node->next = *head;
+
+	*head = Node;
+
+	return (Node);
 }
