@@ -5,21 +5,23 @@
 
 /**
  * free_listint2 - function that frees a listint_t list
- * @head: a double pointer of lists
- *
- * Return: void
+ * @head: list
  */
 
 void free_listint2(listint_t **head)
 {
-	listint_t *omg;
+	listint_t *ptro;
 
 	if (head == NULL)
+	{
 		return;
+	}
+
 	while (*head != NULL)
 	{
-		omg = (*head)->omg;
-		free(*head);
-		*head = omg;
+		ptro = *head;
+		*head = ptro->next;
+		free(ptro);
 	}
+
 }
